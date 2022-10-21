@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/remvze/authors/compare/v0.0.2...v0.0.3) (2022-10-21)
+
+
+### ✨ Features
+
+* add name copy feature ([cceea56](https://github.com/remvze/authors/commit/cceea56601d6959b09d7281912c458445cb365ad))
+
 ### [0.0.2](https://github.com/remvze/authors/compare/v0.0.1...v0.0.2) (2022-10-21)
 
 
