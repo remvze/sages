@@ -8,3 +8,5 @@ export const sex = {
   male: 'male',
   female: 'female',
 };
+
+export const historySize = 3;

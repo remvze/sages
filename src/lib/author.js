@@ -1,5 +1,6 @@
 import { selectRandom } from './random.js';
 import authors from '../data/authors.js';
+import * as history from './history.js';
 
 /**
  * Normalize the given list for random selection
@@ -44,7 +45,14 @@ export const selectRandomAuthor = sex => {
     : authors;
 
   const normalizedAuthors = normalizeAuthors(authorsList);
-  const randomAuthor = selectRandom(normalizedAuthors);
+
+  let randomAuthor;
+
+  do {
+    randomAuthor = selectRandom(normalizedAuthors);
+  } while (history.exists(randomAuthor));
+
+  history.write(randomAuthor);
 
   return randomAuthor;
 };

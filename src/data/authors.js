@@ -18,6 +18,26 @@ const authors = [
     priority: priority.high,
     sex: sex.female,
   },
+  {
+    name: 'Aldous Huxley',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'Viktor Frankl',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'Friedrich Nietzsche',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'Sylvia Plath',
+    priority: priority.low,
+    sex: sex.male,
+  },
 ];
 
 export default authors;
