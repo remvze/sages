@@ -4,6 +4,9 @@
   "description": "Random author selector for Philosophors.",
   "main": "index.js",
   "type": "module",
+  "bin": {
+    "authors": "bin/authors.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . --ext .js",
@@ -37,5 +40,8 @@
     "lint-staged": "13.0.3",
     "prettier": "2.7.1",
     "standard-version": "9.5.0"
+  },
+  "dependencies": {
+    "commander": "9.4.1"
   }
 }
