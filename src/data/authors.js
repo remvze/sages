@@ -1,5 +1,12 @@
 import { priority, sex } from './const.js';
 
+/**
+ * @type {Array<{
+ *   name: string,
+ *   priority: number,
+ *   sex: string
+ * }>}
+ */
 const authors = [
   {
     name: 'Albert Camus',
