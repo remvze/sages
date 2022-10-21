@@ -18,6 +18,7 @@ program
 program
   .command('random')
   .description('Select a random author')
+  .option('-s, --sex <string>', `Author's sex`)
   .action(randomCommand);
 
 export default program;

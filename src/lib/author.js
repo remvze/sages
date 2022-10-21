@@ -30,13 +30,20 @@ const normalizeAuthors = authors => {
 /**
  * Select a random author
  *
+ * @param {string} [sex] - Author's sex (optional)
  * @returns {string} - Randomly selected author
  *
  * @example
  *   selectRandomAuthor() // -> John Doe
  */
-export const selectRandomAuthor = () => {
-  const normalizedAuthors = normalizeAuthors(authors);
+export const selectRandomAuthor = sex => {
+  const authorsList = sex
+    ? authors.filter(
+        author => author.sex.toLocaleLowerCase() === sex.toLocaleLowerCase()
+      )
+    : authors;
+
+  const normalizedAuthors = normalizeAuthors(authorsList);
   const randomAuthor = selectRandom(normalizedAuthors);
 
   return randomAuthor;
