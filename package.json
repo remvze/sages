@@ -1,6 +1,6 @@
 {
   "name": "authors",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Random author selector for Philosophors.",
   "main": "index.js",
   "type": "module",
