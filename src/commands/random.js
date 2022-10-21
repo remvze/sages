@@ -1,4 +1,5 @@
 import chalk from 'chalk';
+import clipboard from 'clipboardy';
 
 import { sex } from '../data/const.js';
 import { selectRandomAuthor } from '../lib/author.js';
@@ -28,7 +29,10 @@ const random = options => {
 
   const author = selectRandomAuthor(selectedSex);
 
+  clipboard.writeSync(author);
+
   logger.success(`Selected author: ${chalk.underline(author)}`);
+  logger.success('The name is copied to your clipboard.');
 };
 
 export default random;
