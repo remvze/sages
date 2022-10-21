@@ -4,7 +4,7 @@ import { Command } from 'commander';
 import { loadJSON } from './helpers/json.js';
 import { getPath } from './helpers/path.js';
 
-import selectCommand from './commands/select.js';
+import randomCommand from './commands/random.js';
 
 const program = new Command();
 const { dirname } = getPath(import.meta.url);
@@ -16,8 +16,8 @@ program
   .version(pkg.version);
 
 program
-  .command('select')
+  .command('random')
   .description('Select a random author')
-  .action(selectCommand);
+  .action(randomCommand);
 
 export default program;
