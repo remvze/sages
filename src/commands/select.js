@@ -1,5 +1,9 @@
+import { randomAuthor } from '../lib/author.js';
+
 const select = () => {
-  console.log('Hello World');
+  const author = randomAuthor();
+
+  console.log(author.name);
 };
 
 export default select;

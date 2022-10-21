@@ -42,6 +42,7 @@
     "standard-version": "9.5.0"
   },
   "dependencies": {
-    "commander": "9.4.1"
+    "commander": "9.4.1",
+    "weighted-random": "0.1.0"
   }
 }
