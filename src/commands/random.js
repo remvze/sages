@@ -1,5 +1,8 @@
+import chalk from 'chalk';
+
 import { sex } from '../data/const.js';
 import { selectRandomAuthor } from '../lib/author.js';
+import logger from '../lib/logger.js';
 
 /**
  * Command to select a random author
@@ -22,7 +25,7 @@ const random = options => {
 
   const author = selectRandomAuthor(selectedSex);
 
-  console.log(author);
+  logger.success(`Selected author: ${chalk.underline(author)}`);
 };
 
 export default random;
