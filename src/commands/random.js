@@ -20,7 +20,10 @@ const random = options => {
     let _sex = options.sex.toLowerCase();
 
     if (['m', 'male'].includes(_sex)) selectedSex = sex.male;
-    if (['f', 'female'].includes(_sex)) selectedSex = sex.female;
+    else if (['f', 'female'].includes(_sex)) selectedSex = sex.female;
+    else {
+      return logger.error(`'${_sex}' is not a valid sex`);
+    }
   }
 
   const author = selectRandomAuthor(selectedSex);

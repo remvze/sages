@@ -44,6 +44,7 @@
   "dependencies": {
     "chalk": "5.1.2",
     "commander": "9.4.1",
+    "log-symbols": "5.1.0",
     "weighted-random": "0.1.0"
   }
 }
