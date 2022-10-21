@@ -5,7 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .js",
+    "lint:fix": "npm run lint -- --fix"
   },
   "repository": {
     "type": "git",
@@ -17,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/remvze/authors/issues"
   },
-  "homepage": "https://github.com/remvze/authors#readme"
+  "homepage": "https://github.com/remvze/authors#readme",
+  "devDependencies": {
+    "eslint": "8.25.0"
+  }
 }
