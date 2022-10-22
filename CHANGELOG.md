@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/remvze/authors/compare/v0.0.4...v0.0.5) (2022-10-22)
+
+
+### ♻️ Code Refactoring
+
+* decouple history and size ([06b167f](https://github.com/remvze/authors/commit/06b167f8ec40e6343813abfcd2269b5e383b831b))
+* make author selection method independant ([0fec311](https://github.com/remvze/authors/commit/0fec3119ed44d93ee0dce157e198aac099e2e732))
+
+
+### ✅ Testing
+
+* create history mock ([4751ddf](https://github.com/remvze/authors/commit/4751ddfdb99bd0f852f745c3bc4d507cf3cc1fec))
+* write test for authors normalization ([980aabc](https://github.com/remvze/authors/commit/980aabc16823f3b3b9783ab80026b4f1ab09daf7))
+* write tests for author selection ([712f0e6](https://github.com/remvze/authors/commit/712f0e65625e3957bf3338b69ad4fcbcc4976261))
+* write tests for history ([9baaae3](https://github.com/remvze/authors/commit/9baaae3989dac234dffac1d262119089455ab01a))
+* write tests for random helper ([fa2a3ae](https://github.com/remvze/authors/commit/fa2a3ae3cc035176db26b72b326f42e7efaae905))
+
+
+### 🚚 Chores
+
+* add tests to pre-commit hook ([a1483c8](https://github.com/remvze/authors/commit/a1483c8f6e597e0d2d5342d5a7fe42917f829fdc))
+* add Vitest ([c24241c](https://github.com/remvze/authors/commit/c24241c473df932411ed1c4ff23f88f4df555954))
+* fix Husky pre-commit hook ([1afa2e0](https://github.com/remvze/authors/commit/1afa2e04468ebe3c67cb03671bc2999137e670e9))
+
 ### 0.0.4 (2022-10-22)
 
 
