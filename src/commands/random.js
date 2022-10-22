@@ -64,6 +64,10 @@ const random = options => {
     normalizeOptions(options)
   );
 
+  if (!author) {
+    return logger.error('No author could be found.');
+  }
+
   clipboard.writeSync(author);
 
   logger.success(`Selected author: ${chalk.underline(author)}`);
