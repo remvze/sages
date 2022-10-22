@@ -45,4 +45,29 @@ describe('History', () => {
     expect(history.exists(item1)).toBe(false);
     expect(history.exists(item3)).toBe(true);
   });
+
+  it('Should check all names', () => {
+    const history = new History(historyFile, 3);
+    const items = new Array(3).fill(0).map(() => Math.random());
+
+    history.write(items[0]);
+    history.write(items[1]);
+
+    expect(history.allExist([items[0], items[1]])).toBe(true);
+    expect(history.allExist([items[0], items[1], items[2]])).toBe(false);
+  });
+
+  it('Should empty the history', () => {
+    const history = new History(historyFile, 5);
+
+    const items = new Array(5).fill(0).map(() => Math.random());
+
+    items.forEach(item => history.write(item));
+
+    expect(history.getHistory().length).toBeGreaterThan(0);
+
+    history.empty();
+
+    expect(history.getHistory().length).toBe(0);
+  });
 });
