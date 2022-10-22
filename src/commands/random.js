@@ -25,7 +25,7 @@ const historyFile = path.resolve(dirname, '../history/index.json');
  *   priority: (number | null)
  * }}
  */
-const normalizeOptions = options => {
+export const normalizeOptions = options => {
   let selectedSex = null;
   let selectedPriority = null;
 
@@ -33,10 +33,7 @@ const normalizeOptions = options => {
     let sexOption = options.sex.toLowerCase();
 
     if (['m', 'male'].includes(sexOption)) selectedSex = sex.male;
-    else if (['f', 'female'].includes(sexOption)) selectedSex = sex.female;
-    else {
-      return logger.error(`'${sexOption}' is not a valid sex`);
-    }
+    if (['f', 'female'].includes(sexOption)) selectedSex = sex.female;
   }
 
   if (options.priority) {
