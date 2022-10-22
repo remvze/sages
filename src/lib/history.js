@@ -1,5 +1,4 @@
 import { loadJSON, writeJSON } from '../helpers/json.js';
-import { historySize } from '../data/const.js';
 
 class History {
   /**
@@ -11,8 +10,9 @@ class History {
    * @example
    *   new History('./history.json')
    */
-  constructor(path) {
+  constructor(path, size) {
     this.path = path;
+    this.size = size;
   }
 
   /**
@@ -55,7 +55,7 @@ class History {
     const history = this.#getHistory();
 
     if (history.includes(name)) return;
-    if (history.length === historySize) history.pop();
+    if (history.length === this.size) history.pop();
 
     history.unshift(name);
 

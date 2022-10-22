@@ -2,7 +2,7 @@ import path from 'node:path';
 import chalk from 'chalk';
 import clipboard from 'clipboardy';
 
-import { sex } from '../data/const.js';
+import { sex, historySize } from '../data/const.js';
 import authors from '../data/authors.js';
 import { selectRandomAuthor } from '../lib/author.js';
 import logger from '../lib/logger.js';
@@ -34,7 +34,7 @@ const random = options => {
     }
   }
 
-  const history = new History(historyFile);
+  const history = new History(historyFile, historySize);
   const author = selectRandomAuthor(authors, history, selectedSex);
 
   clipboard.writeSync(author);
