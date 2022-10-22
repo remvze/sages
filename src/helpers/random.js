@@ -27,9 +27,9 @@ export const shuffle = items => {
  */
 export const selectRandom = data => {
   const keys = Object.keys(data);
-  const weights = keys.map(key => data[key]);
+  const weights = keys.map(key => Number(data[key]));
   const randomIndex = weightedRandom(weights);
   const randomKey = keys[randomIndex];
 
-  return randomKey;
+  return randomKey || null;
 };
