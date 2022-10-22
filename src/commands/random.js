@@ -27,12 +27,12 @@ const random = options => {
   let selectedPriority = null;
 
   if (options.sex) {
-    let _sex = options.sex.toLowerCase();
+    let sexOption = options.sex.toLowerCase();
 
-    if (['m', 'male'].includes(_sex)) selectedSex = sex.male;
-    else if (['f', 'female'].includes(_sex)) selectedSex = sex.female;
+    if (['m', 'male'].includes(sexOption)) selectedSex = sex.male;
+    else if (['f', 'female'].includes(sexOption)) selectedSex = sex.female;
     else {
-      return logger.error(`'${_sex}' is not a valid sex`);
+      return logger.error(`'${sexOption}' is not a valid sex`);
     }
   }
 
@@ -41,12 +41,10 @@ const random = options => {
   }
 
   const history = new History(historyFile, historySize);
-  const author = selectRandomAuthor(
-    authors,
-    history,
-    selectedSex,
-    selectedPriority
-  );
+  const author = selectRandomAuthor(authors, history, {
+    sex: selectedSex,
+    priority: selectedPriority,
+  });
 
   clipboard.writeSync(author);
 

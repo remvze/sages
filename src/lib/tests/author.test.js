@@ -46,8 +46,8 @@ describe('Select a random author', () => {
   });
 
   it('Should return author according to the given sex', () => {
-    const male = selectRandomAuthor(authors, history, 'male');
-    const female = selectRandomAuthor(authors, history, 'female');
+    const male = selectRandomAuthor(authors, history, { sex: 'male' });
+    const female = selectRandomAuthor(authors, history, { sex: 'female' });
     const maleObject = authors.find(author => author.name === male);
     const femaleObject = authors.find(author => author.name === female);
 

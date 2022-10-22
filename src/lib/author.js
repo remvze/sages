@@ -41,8 +41,11 @@ export const normalizeAuthors = authors => {
  * @example
  *   selectRandomAuthor() // -> John Doe
  */
-export const selectRandomAuthor = (authors, history, sex, priority) => {
+export const selectRandomAuthor = (authors, history, options) => {
   if (!Array.isArray(authors) || authors?.length === 0) return null;
+
+  const sex = options?.sex;
+  const priority = options?.priority;
 
   let authorsList = sex
     ? authors.filter(
