@@ -24,7 +24,7 @@ const historyFile = path.resolve(dirname, '../history/index.json');
  *     priority: 1
  *   }]) // -> { 'John': 1 }
  */
-const normalizeAuthors = authors => {
+export const normalizeAuthors = authors => {
   const normalized = {};
 
   authors.forEach(author => {
