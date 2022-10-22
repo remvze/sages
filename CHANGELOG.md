@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6](https://github.com/remvze/authors/compare/v0.0.5...v0.0.6) (2022-10-22)
+
+
+### 🐛 Bug Fixes
+
+* fix infinite loop in authors ([034bc49](https://github.com/remvze/authors/commit/034bc490820fd5698aacb2582d75ab00b8697f51))
+
+
+### ♻️ Code Refactoring
+
+* add options to author selection ([5f0f4bf](https://github.com/remvze/authors/commit/5f0f4bf23990847ed36e8fc7756e6225e7e0ce50))
+* seperate options normalizer ([126a3ed](https://github.com/remvze/authors/commit/126a3edafc000c093d71af14e40f05efa90c5108))
+
+
+### ✨ Features
+
+* add error message for empty author ([fa09480](https://github.com/remvze/authors/commit/fa094806d66c0542f425ea75972b0ecd59f31bf2))
+* add filter based on priority ([80b1fb2](https://github.com/remvze/authors/commit/80b1fb284a82cfd8e1b955403c584cc03b966b75))
+
+
+### ✅ Testing
+
+* write tests for history new methods ([295ae29](https://github.com/remvze/authors/commit/295ae293ad9a4c019254be0e0f40e7b3edbf86f9))
+* write tests for options normalizer ([154c744](https://github.com/remvze/authors/commit/154c74411b91b1197602031aafe13e241e9e6019))
+* write tests for priority filter ([bef1bf2](https://github.com/remvze/authors/commit/bef1bf2f3666d298cf14c2329607193d7e12255f))
+
 ### [0.0.5](https://github.com/remvze/authors/compare/v0.0.4...v0.0.5) (2022-10-22)
 
 
