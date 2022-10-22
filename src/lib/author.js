@@ -1,4 +1,4 @@
-import { selectRandom } from './random.js';
+import { selectRandom, shuffle } from '../helpers/random.js';
 import authors from '../data/authors.js';
 import * as history from './history.js';
 
@@ -44,7 +44,7 @@ export const selectRandomAuthor = sex => {
       )
     : authors;
 
-  const normalizedAuthors = normalizeAuthors(authorsList);
+  const normalizedAuthors = normalizeAuthors(shuffle(authorsList));
 
   let randomAuthor;
 

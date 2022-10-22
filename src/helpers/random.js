@@ -1,6 +1,22 @@
 import weightedRandom from 'weighted-random';
 
 /**
+ * Shuffle the items of an array
+ *
+ * @param {Array} items - Array of items to shuffle
+ * @returns {Array} - Shuffled array
+ *
+ * @example
+ *   shuffle([1, 2, 3]) // -> [3, 1, 2]
+ */
+export const shuffle = items => {
+  return items
+    .map(value => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value);
+};
+
+/**
  * Select a random but weighted key from an object
  *
  * @param {Object<string, number>} data - Data to be randomly select from
