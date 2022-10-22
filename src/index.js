@@ -19,6 +19,7 @@ program
   .command('random')
   .description('Select a random author')
   .option('-s, --sex <string>', `Author's sex`)
+  .option('-p, --priority <string>', `Author's priority`)
   .action(randomCommand);
 
 export default program;
