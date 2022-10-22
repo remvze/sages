@@ -1,54 +1,66 @@
-import path from 'node:path';
-
 import { loadJSON, writeJSON } from '../helpers/json.js';
-import { getPath } from '../helpers/path.js';
 import { historySize } from '../data/const.js';
 
-const { dirname } = getPath(import.meta.url);
-const historyFile = path.resolve(dirname, '../history/index.json');
+class History {
+  /**
+   * @constructor
+   *
+   * @param {string} path - Path to history file
+   * @returns {void}
+   *
+   * @example
+   *   new History('./history.json')
+   */
+  constructor(path) {
+    this.path = path;
+  }
 
-/**
- * Get the current history
- *
- * @returns {Array} - The history
- */
-const getHistory = () => {
-  const history = loadJSON(historyFile, []);
+  /**
+   * @property {Function} getHistory - Get the current history
+   * @access private
+   *
+   * @returns {Array} - The history
+   */
+  #getHistory() {
+    const history = loadJSON(this.path, []);
 
-  return history;
-};
+    return history;
+  }
 
-/**
- * Check if a name exists in history
- *
- * @param {string} name - Author's name to check
- * @returns {boolean} - True if exists
- *
- * @example
- *   exists('John Doe')
- */
-export const exists = name => {
-  const history = getHistory();
+  /**
+   * @property {Function} exists - Check if a name exists in history
+   *
+   * @param {string} name - Author's name to check
+   * @returns {boolean} - True if exists
+   *
+   * @example
+   *   history.exists('John Doe')
+   */
+  exists(name) {
+    const history = this.#getHistory();
 
-  return history.includes(name);
-};
+    return history.includes(name);
+  }
 
-/**
- * Add a name to the history
- *
- * @param {string} name - Name to add to the history
- * @returns {void}
- *
- * @example
- *   write('John Doe')
- */
-export const write = name => {
-  const history = getHistory();
+  /**
+   * @property {Function} write - Add a name to the history
+   *
+   * @param {string} name - Name to add to the history
+   * @returns {void}
+   *
+   * @example
+   *   history.write('John Doe')
+   */
+  write(name) {
+    const history = this.#getHistory();
 
-  if (history.includes(name)) return;
-  if (history.length === historySize) history.pop();
+    if (history.includes(name)) return;
+    if (history.length === historySize) history.pop();
 
-  history.unshift(name);
+    history.unshift(name);
 
-  writeJSON(historyFile, history);
-};
+    writeJSON(this.path, history);
+  }
+}
+
+export default History;

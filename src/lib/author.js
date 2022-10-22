@@ -1,6 +1,12 @@
+import path from 'node:path';
+
 import { selectRandom, shuffle } from '../helpers/random.js';
+import { getPath } from '../helpers/path.js';
 import authors from '../data/authors.js';
-import * as history from './history.js';
+import History from './history.js';
+
+const { dirname } = getPath(import.meta.url);
+const historyFile = path.resolve(dirname, '../history/index.json');
 
 /**
  * Normalize the given list for random selection
@@ -45,6 +51,7 @@ export const selectRandomAuthor = sex => {
     : authors;
 
   const normalizedAuthors = normalizeAuthors(shuffle(authorsList));
+  const history = new History(historyFile);
 
   let randomAuthor;
 
