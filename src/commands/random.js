@@ -13,16 +13,19 @@ const { dirname } = getPath(import.meta.url);
 const historyFile = path.resolve(dirname, '../history/index.json');
 
 /**
- * Command to select a random author
+ * Normalize the options object
  *
  * @param {{
  *   sex?: stringو
  *   priority?: string
- * }} options - Options given to the command
+ * }} options - Options to be normalized
  *
- * @returns {void}
+ * @returns {{
+ *   sex: (string | null),
+ *   priority: (number | null)
+ * }}
  */
-const random = options => {
+const normalizeOptions = options => {
   let selectedSex = null;
   let selectedPriority = null;
 
@@ -40,11 +43,26 @@ const random = options => {
     selectedPriority = priority[options.priority.toLowerCase()] || null;
   }
 
+  return { sex: selectedSex, priority: selectedPriority };
+};
+
+/**
+ * Command to select a random author
+ *
+ * @param {{
+ *   sex?: stringو
+ *   priority?: string
+ * }} options - Options given to the command
+ *
+ * @returns {void}
+ */
+const random = options => {
   const history = new History(historyFile, historySize);
-  const author = selectRandomAuthor(authors, history, {
-    sex: selectedSex,
-    priority: selectedPriority,
-  });
+  const author = selectRandomAuthor(
+    authors,
+    history,
+    normalizeOptions(options)
+  );
 
   clipboard.writeSync(author);
 
