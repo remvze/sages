@@ -13,15 +13,15 @@ class History {
   constructor(path, size) {
     this.path = path;
     this.size = size;
+    this.cache = null;
   }
 
   /**
    * @property {Function} getHistory - Get the current history
-   * @access private
    *
    * @returns {Array} - The history
    */
-  #getHistory() {
+  getHistory() {
     const history = loadJSON(this.path, []);
 
     return history;
@@ -37,9 +37,26 @@ class History {
    *   history.exists('John Doe')
    */
   exists(name) {
-    const history = this.#getHistory();
+    const history = this.getHistory();
+
+    this.cache = history;
 
     return history.includes(name);
+  }
+
+  /**
+   * Check if all given names exist in the history
+   *
+   * @param {Array<string>} names - An array of names to check
+   * @returns {boolean} - True if all exist
+   *
+   * @example
+   *   history.allExist(['foo', 'bar'])
+   */
+  allExist(names) {
+    const result = names.every(name => this.exists(name));
+
+    return result;
   }
 
   /**
@@ -52,7 +69,7 @@ class History {
    *   history.write('John Doe')
    */
   write(name) {
-    const history = this.#getHistory();
+    const history = this.getHistory();
 
     if (history.includes(name)) return;
     if (history.length === this.size) history.pop();
@@ -60,6 +77,18 @@ class History {
     history.unshift(name);
 
     writeJSON(this.path, history);
+  }
+
+  /**
+   * @property {Function} empty - Empty the history
+   *
+   * @returns {void}
+   *
+   * @example
+   *   history.empty()
+   */
+  empty() {
+    writeJSON(this.path, []);
   }
 }
 

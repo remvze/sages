@@ -56,6 +56,16 @@ export const selectRandomAuthor = (authors, history, sex, priority) => {
 
   const normalizedAuthors = normalizeAuthors(shuffle(authorsList));
 
+  /**
+   * Empty the history if it contains all authors.
+   */
+  if (
+    history.getHistory().length >= authorsList.length &&
+    history.allExist(authorsList.map(author => author.name))
+  ) {
+    history.empty();
+  }
+
   let randomAuthor;
 
   do {
