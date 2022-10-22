@@ -1,6 +1,6 @@
 import { vi } from 'vitest';
 
 export default {
-  exist: vi.fn(() => false),
+  exists: vi.fn(() => false),
   write: vi.fn(),
 };

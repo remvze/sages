@@ -1,3 +1,4 @@
+import path from 'node:path';
 import chalk from 'chalk';
 import clipboard from 'clipboardy';
 
@@ -5,6 +6,11 @@ import { sex } from '../data/const.js';
 import authors from '../data/authors.js';
 import { selectRandomAuthor } from '../lib/author.js';
 import logger from '../lib/logger.js';
+import { getPath } from '../helpers/path.js';
+import History from '../lib/history.js';
+
+const { dirname } = getPath(import.meta.url);
+const historyFile = path.resolve(dirname, '../history/index.json');
 
 /**
  * Command to select a random author
@@ -28,7 +34,8 @@ const random = options => {
     }
   }
 
-  const author = selectRandomAuthor(authors, selectedSex);
+  const history = new History(historyFile);
+  const author = selectRandomAuthor(authors, history, selectedSex);
 
   clipboard.writeSync(author);
 
