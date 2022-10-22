@@ -2,7 +2,6 @@ import path from 'node:path';
 
 import { selectRandom, shuffle } from '../helpers/random.js';
 import { getPath } from '../helpers/path.js';
-import authors from '../data/authors.js';
 import History from './history.js';
 
 const { dirname } = getPath(import.meta.url);
@@ -37,13 +36,20 @@ export const normalizeAuthors = authors => {
 /**
  * Select a random author
  *
+ * @param {Array<{
+ *   name: string,
+ *   sex: string,
+ *   priority: number
+ * }>} authors - List of authors
  * @param {string} [sex] - Author's sex (optional)
  * @returns {string} - Randomly selected author
  *
  * @example
  *   selectRandomAuthor() // -> John Doe
  */
-export const selectRandomAuthor = sex => {
+export const selectRandomAuthor = (authors, sex) => {
+  if (!Array.isArray(authors) || authors?.length === 0) return null;
+
   const authorsList = sex
     ? authors.filter(
         author => author.sex.toLocaleLowerCase() === sex.toLocaleLowerCase()

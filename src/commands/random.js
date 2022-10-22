@@ -2,6 +2,7 @@ import chalk from 'chalk';
 import clipboard from 'clipboardy';
 
 import { sex } from '../data/const.js';
+import authors from '../data/authors.js';
 import { selectRandomAuthor } from '../lib/author.js';
 import logger from '../lib/logger.js';
 
@@ -27,7 +28,7 @@ const random = options => {
     }
   }
 
-  const author = selectRandomAuthor(selectedSex);
+  const author = selectRandomAuthor(authors, selectedSex);
 
   clipboard.writeSync(author);
 
