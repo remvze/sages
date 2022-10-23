@@ -2,7 +2,8 @@ import path from 'node:path';
 import chalk from 'chalk';
 import clipboard from 'clipboardy';
 
-import { sex, historySize, priority } from '../data/const.js';
+import { sex, priority } from '../data/const.js';
+import { historySize } from '../config/history.js';
 import authors from '../data/authors.js';
 import { selectRandomAuthor } from '../lib/author.js';
 import logger from '../lib/logger.js';
