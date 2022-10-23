@@ -17,7 +17,8 @@
     "prepare": "husky install",
     "postinstall": "husky install",
     "commit": "git-cz",
-    "release": "standard-version --no-verify"
+    "release": "standard-version --no-verify",
+    "count": "node src/scripts/count"
   },
   "repository": {
     "type": "git",
