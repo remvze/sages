@@ -17,7 +17,7 @@ const historyFile = path.resolve(dirname, '../history/index.json');
  * Normalize the options object
  *
  * @param {{
- *   sex?: stringو
+ *   sex?: string,
  *   priority?: string
  * }} options - Options to be normalized
  *
