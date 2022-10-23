@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.8](https://github.com/remvze/authors/compare/v0.0.7...v0.0.8) (2022-10-23)
+
+
+### ♻️ Code Refactoring
+
+* relocate history config ([eddc564](https://github.com/remvze/authors/commit/eddc5642e596a7e0a5983a2dcbb0f303ed189e66))
+
+
+### 📝 Documentation
+
+* fix typo in type definition ([485a8ca](https://github.com/remvze/authors/commit/485a8ca0393c95dc0cac0daa53a39bd4ed60394c))
+
+
+### ✨ Features
+
+* add counter script ([bf2ed55](https://github.com/remvze/authors/commit/bf2ed55162c9ddadf121085683d2dc3b1bbc4f01))
+* add male and female count ([b7c2ac0](https://github.com/remvze/authors/commit/b7c2ac067c34fe8e9bcc63ba605e041410464bea))
+* add more authors ([78c0e2e](https://github.com/remvze/authors/commit/78c0e2e42e648bfebbac15194419ea0f39409629))
+* increase the weights ([ee184cc](https://github.com/remvze/authors/commit/ee184ccfaa53eddf7f5d9199df07cbd8c5898cce))
+
 ### [0.0.7](https://github.com/remvze/authors/compare/v0.0.6...v0.0.7) (2022-10-23)
 
 
