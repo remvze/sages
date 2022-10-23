@@ -150,6 +150,266 @@ const authors = [
     priority: priority.low,
     sex: sex.male,
   },
+  {
+    name: 'Ernest Hemingway',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'Agatha Christie',
+    priority: priority.low,
+    sex: sex.female,
+  },
+  {
+    name: 'Charles Dickens',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'James Joyce',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'William Faulkner',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'Paulo Coelho',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'Hermann Hesse',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'John Steinbeck',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'Emily Dickinson',
+    priority: priority.low,
+    sex: sex.female,
+  },
+  {
+    name: 'Jane Austen',
+    priority: priority.low,
+    sex: sex.female,
+  },
+  {
+    name: 'Mark Twain',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'Immanuel Kant',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'John Locke',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'René Descartes',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'Ludwig Wittgenstein',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'David Hume',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'Confucius',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'Michel Foucault',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'Niccolò Machiavelli',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'Ralph Waldo Emerson',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'Jean-Jacques Rousseau',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'Epicurus',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'John Stuart Mill',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'Simone de Beauvoir',
+    priority: priority.low,
+    sex: sex.female,
+  },
+  {
+    name: 'Martin Heidegger',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'Thomas Hobbes',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'Auguste Comte',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'Baruch Spinoza',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'Karl Popper',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'Hannah Arendt',
+    priority: priority.low,
+    sex: sex.female,
+  },
+  {
+    name: 'Iris Murdoch',
+    priority: priority.low,
+    sex: sex.female,
+  },
+  {
+    name: 'Toni Morrison',
+    priority: priority.low,
+    sex: sex.female,
+  },
+  {
+    name: 'Margaret Atwood',
+    priority: priority.low,
+    sex: sex.female,
+  },
+  {
+    name: 'Mary Shelley',
+    priority: priority.low,
+    sex: sex.female,
+  },
+  {
+    name: 'J. K. Rowling',
+    priority: priority.low,
+    sex: sex.female,
+  },
+  {
+    name: 'Charlotte Brontë',
+    priority: priority.low,
+    sex: sex.female,
+  },
+  {
+    name: 'Zora Neale Hurston',
+    priority: priority.low,
+    sex: sex.female,
+  },
+  {
+    name: 'Emily Brontë',
+    priority: priority.low,
+    sex: sex.female,
+  },
+  {
+    name: 'Louisa May Alcott',
+    priority: priority.low,
+    sex: sex.female,
+  },
+  {
+    name: 'Gertrude Stein',
+    priority: priority.low,
+    sex: sex.female,
+  },
+  {
+    name: 'Harper Lee',
+    priority: priority.low,
+    sex: sex.female,
+  },
+  {
+    name: 'Alice Walker',
+    priority: priority.low,
+    sex: sex.female,
+  },
+  {
+    name: 'Octavia E. Butler',
+    priority: priority.low,
+    sex: sex.female,
+  },
+  {
+    name: 'Octavia Butler',
+    priority: priority.low,
+    sex: sex.female,
+  },
+  {
+    name: 'Zadie Smith',
+    priority: priority.low,
+    sex: sex.female,
+  },
+  {
+    name: 'Doris Lessing',
+    priority: priority.low,
+    sex: sex.female,
+  },
+  {
+    name: 'Ursula K. Le Guin',
+    priority: priority.low,
+    sex: sex.female,
+  },
+  {
+    name: 'Clarice Lispector',
+    priority: priority.low,
+    sex: sex.female,
+  },
+  {
+    name: 'Chimamanda Ngozi Adichie',
+    priority: priority.low,
+    sex: sex.female,
+  },
+  {
+    name: 'Angela Carter',
+    priority: priority.low,
+    sex: sex.female,
+  },
+  {
+    name: 'Khaled Hosseini',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'Kahlil Gibran',
+    priority: priority.low,
+    sex: sex.male,
+  },
 ];
 
 export default authors;
