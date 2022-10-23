@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.7](https://github.com/remvze/authors/compare/v0.0.6...v0.0.7) (2022-10-23)
+
+
+### ✨ Features
+
+* add authors ([cb77c59](https://github.com/remvze/authors/commit/cb77c59b519d6dff0c3fa36bc0ccc76890271515))
+
 ### [0.0.6](https://github.com/remvze/authors/compare/v0.0.5...v0.0.6) (2022-10-22)
 
 
