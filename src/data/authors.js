@@ -12,6 +12,27 @@ const authors = [
    * High Priority
    */
   {
+    name: 'Alain de Botton',
+    priority: priority.high,
+    sex: sex.male,
+  },
+  {
+    name: 'Irvin D. Yalom',
+    priority: priority.high,
+    sex: sex.male,
+  },
+  {
+    name: 'George Orwell',
+    priority: priority.high,
+    sex: sex.male,
+  },
+  {
+    name: 'Margaret Atwood',
+    priority: priority.high,
+    sex: sex.female,
+  },
+
+  {
     name: 'Albert Camus',
     priority: priority.high,
     sex: sex.male,
@@ -87,11 +108,6 @@ const authors = [
   },
   {
     name: 'Arthur Schopenhauer',
-    priority: priority.low,
-    sex: sex.male,
-  },
-  {
-    name: 'George Orwell',
     priority: priority.low,
     sex: sex.male,
   },
@@ -307,11 +323,6 @@ const authors = [
   },
   {
     name: 'Toni Morrison',
-    priority: priority.low,
-    sex: sex.female,
-  },
-  {
-    name: 'Margaret Atwood',
     priority: priority.low,
     sex: sex.female,
   },
