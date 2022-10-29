@@ -1,11 +1,15 @@
 import { priority, sex } from './const.js';
 
 /**
- * @type {Array<{
- *   name: string,
- *   priority: number,
- *   sex: string
- * }>}
+ * @typedef {Object} Author
+ *
+ * @property {string} name
+ * @property {number} priority
+ * @property {string} sex
+ */
+
+/**
+ * @type {Array<Author>}
  */
 const authors = [
   /**
