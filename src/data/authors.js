@@ -56,6 +56,11 @@ const authors = [
     priority: priority.high,
     sex: sex.male,
   },
+  {
+    name: 'Paulo Coelho',
+    priority: priority.high,
+    sex: sex.male,
+  },
 
   /**
    * Low Priority
@@ -192,11 +197,6 @@ const authors = [
   },
   {
     name: 'William Faulkner',
-    priority: priority.low,
-    sex: sex.male,
-  },
-  {
-    name: 'Paulo Coelho',
     priority: priority.low,
     sex: sex.male,
   },
@@ -381,6 +381,11 @@ const authors = [
     sex: sex.female,
   },
   {
+    name: 'Anaïs Nin',
+    priority: priority.low,
+    sex: sex.female,
+  },
+  {
     name: 'Octavia Butler',
     priority: priority.low,
     sex: sex.female,
@@ -422,6 +427,11 @@ const authors = [
   },
   {
     name: 'Kahlil Gibran',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'Edgar Allan Poe',
     priority: priority.low,
     sex: sex.male,
   },
