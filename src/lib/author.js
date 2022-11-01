@@ -29,11 +29,7 @@ export const normalizeAuthors = authors => {
 /**
  * Select a random author
  *
- * @param {Array<{
- *   name: string,
- *   sex: string,
- *   priority: number
- * }>} authors - List of authors
+ * @param {Array<import('../data/authors').Author>} authors - List of authors
  * @param {Object} history - An instance of History class
  * @param {string} [sex] - Author's sex (optional)
  * @returns {string} - Randomly selected author
