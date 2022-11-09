@@ -33,7 +33,7 @@ export const loadJSON = (path, initial = null) => {
  *   writeJSON('data.json', { foo: 'bar' })
  */
 export const writeJSON = (path, json) => {
-  const data = typeof json === 'string' ? json : JSON.stringify(json);
+  const data = typeof json === 'string' ? json : JSON.stringify(json, null, 2);
 
   fs.writeFileSync(path, data);
 };
