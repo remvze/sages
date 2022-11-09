@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.10](https://github.com/remvze/authors/compare/v0.0.9...v0.0.10) (2022-11-09)
+
+
+### 🚚 Chores
+
+* add more authors ([2ddff12](https://github.com/remvze/authors/commit/2ddff12d6eb0bf207d8d37d546cd515322c1fdb7))
+
+
+### 📝 Documentation
+
+* add author type ([aff1c96](https://github.com/remvze/authors/commit/aff1c96261f0e908d9b7ea78af935722e613af0a))
+* edit README.md ([bd8a2c2](https://github.com/remvze/authors/commit/bd8a2c200a42d33141a4f67d27866b84ad2fd304))
+* remove emoji ([b0f4e82](https://github.com/remvze/authors/commit/b0f4e82aea6ce11a412b076273c5522f6a2f6e75))
+
+
+### ✨ Features
+
+* add default namespace ([024249e](https://github.com/remvze/authors/commit/024249eb3378f1881d8f7787a853b4f111700600))
+* add namespaces to history ([45769bb](https://github.com/remvze/authors/commit/45769bbd15a7c194d6550ddb19636cb9727b01db))
+
+
+### 🐛 Bug Fixes
+
+* prettify history file ([f9a3e4b](https://github.com/remvze/authors/commit/f9a3e4b61a6ea5da7eed13e01b71f57500c4f4f9))
+
 ### [0.0.9](https://github.com/remvze/authors/compare/v0.0.8...v0.0.9) (2022-10-26)
 
 
