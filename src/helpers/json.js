@@ -11,11 +11,15 @@ import fs from 'node:fs';
  *   loadJSON('./data.json')
  */
 export const loadJSON = (path, initial = null) => {
-  if (!fs.existsSync(path)) return initial;
+  try {
+    const data = fs.readFileSync(path);
 
-  const data = fs.readFileSync(path);
+    return JSON.parse(data);
+  } catch (error) {
+    writeJSON(path, initial);
 
-  return JSON.parse(data);
+    return initial;
+  }
 };
 
 /**

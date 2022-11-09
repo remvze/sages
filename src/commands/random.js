@@ -41,21 +41,50 @@ export const normalizeOptions = options => {
     selectedPriority = priority[options.priority.toLowerCase()] || null;
   }
 
-  return { sex: selectedSex, priority: selectedPriority };
+  return {
+    sex: selectedSex,
+    priority: selectedPriority,
+  };
+};
+
+/**
+ * Normalize the given namespace.
+ *
+ * @param {string} ns - Namespace to be normalized
+ * @returns {string} - Returns default if nothing is provided
+ */
+export const normalizeNamespace = ns => {
+  if (!ns) return 'default';
+
+  const namespace = ns.toLowerCase();
+
+  const abbrs = {
+    ig: 'instagram',
+    tw: 'twitter',
+    tg: 'telegram',
+  };
+
+  return abbrs[namespace] || namespace;
 };
 
 /**
  * Command to select a random author
  *
  * @param {{
- *   sex?: stringو
- *   priority?: string
+ *   sex?: string,
+ *   priority?: string,
+ *   namespace?: string
  * }} options - Options given to the command
  *
  * @returns {void}
  */
 const random = options => {
-  const history = new History(historyFile, historySize);
+  const history = new History(
+    historyFile,
+    historySize,
+    normalizeNamespace(options.namespace)
+  );
+
   const author = selectRandomAuthor(
     authors,
     history,

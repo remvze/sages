@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 
 import { sex, priority } from '../../data/const';
-import { normalizeOptions } from '../random';
+import { normalizeOptions, normalizeNamespace } from '../random';
 
 describe('Normalize options', () => {
   it('Should normalize the sex', () => {
@@ -53,5 +53,31 @@ describe('Normalize options', () => {
       sex: sex.male,
       priority: priority.low,
     });
+  });
+});
+
+describe('Normalize namespace', () => {
+  it('Should return default if empty', () => {
+    const namespace = normalizeNamespace();
+
+    expect(namespace).toBe('default');
+  });
+
+  it('Should abbreviate', () => {
+    const ig = normalizeNamespace('ig');
+
+    expect(ig).toBe('instagram');
+  });
+
+  it('Should return the given namespace if there is no abbreviation', () => {
+    const namespace = normalizeNamespace('namespace');
+
+    expect(namespace).toBe('namespace');
+  });
+
+  it('Should lower the case', () => {
+    const namespace = normalizeNamespace('Name');
+
+    expect(namespace).toBe('name');
   });
 });

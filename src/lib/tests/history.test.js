@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { describe, it, expect, beforeAll, afterAll } from 'vitest';
+import { describe, it, expect, afterAll } from 'vitest';
 
 import { getPath } from '../../helpers/path.js';
 import History from '../history.js';
@@ -8,17 +8,13 @@ import History from '../history.js';
 const { dirname } = getPath(import.meta.url);
 const historyFile = path.resolve(dirname, './history.json');
 
-beforeAll(() => {
-  fs.writeFileSync(historyFile, '[]');
-});
-
 afterAll(() => {
   fs.unlinkSync(historyFile);
 });
 
 describe('History', () => {
   it('Should write and check', () => {
-    const history = new History(historyFile, 10);
+    const history = new History(historyFile, 10, 'test');
     const item = Math.random();
 
     expect(history.exists(item)).toBe(false);
@@ -29,7 +25,7 @@ describe('History', () => {
   });
 
   it('Should pop and unshift items if full', () => {
-    const history = new History(historyFile, 2);
+    const history = new History(historyFile, 2, 'test');
     const item1 = Math.random();
     const item2 = Math.random();
     const item3 = Math.random();
@@ -47,7 +43,7 @@ describe('History', () => {
   });
 
   it('Should check all names', () => {
-    const history = new History(historyFile, 3);
+    const history = new History(historyFile, 3, 'test');
     const items = new Array(3).fill(0).map(() => Math.random());
 
     history.write(items[0]);
@@ -58,16 +54,16 @@ describe('History', () => {
   });
 
   it('Should empty the history', () => {
-    const history = new History(historyFile, 5);
+    const history = new History(historyFile, 5, 'test');
 
     const items = new Array(5).fill(0).map(() => Math.random());
 
     items.forEach(item => history.write(item));
 
-    expect(history.getHistory().length).toBeGreaterThan(0);
+    expect(history.getHistory().test.length).toBeGreaterThan(0);
 
     history.empty();
 
-    expect(history.getHistory().length).toBe(0);
+    expect(history.getHistory().test.length).toBe(0);
   });
 });

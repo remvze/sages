@@ -5,24 +5,27 @@ class History {
    * @constructor
    *
    * @param {string} path - Path to history file
+   * @param {number} size - History size
+   * @param {string} [namespace=default] - History namespace to use
    * @returns {void}
    *
    * @example
    *   new History('./history.json')
    */
-  constructor(path, size) {
+  constructor(path, size, namespace = 'default') {
     this.path = path;
     this.size = size;
+    this.namespace = namespace.toLowerCase();
     this.cache = null;
   }
 
   /**
    * @property {Function} getHistory - Get the current history
    *
-   * @returns {Array} - The history
+   * @returns {Object} - The history object with all namespaces
    */
   getHistory() {
-    const history = loadJSON(this.path, []);
+    const history = loadJSON(this.path, { default: [] });
 
     return history;
   }
@@ -39,9 +42,7 @@ class History {
   exists(name) {
     const history = this.getHistory();
 
-    this.cache = history;
-
-    return history.includes(name);
+    return history[this.namespace]?.includes(name) || false;
   }
 
   /**
@@ -70,11 +71,14 @@ class History {
    */
   write(name) {
     const history = this.getHistory();
+    const namespace = history[this.namespace] || [];
 
-    if (history.includes(name)) return;
-    if (history.length === this.size) history.pop();
+    if (namespace.includes(name)) return;
+    if (namespace.length === this.size) namespace.pop();
 
-    history.unshift(name);
+    namespace.unshift(name);
+
+    history[this.namespace] = namespace;
 
     writeJSON(this.path, history);
   }
@@ -88,7 +92,9 @@ class History {
    *   history.empty()
    */
   empty() {
-    writeJSON(this.path, []);
+    const history = this.getHistory();
+
+    writeJSON(this.path, { ...history, [this.namespace]: [] });
   }
 }
 

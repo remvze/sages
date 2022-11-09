@@ -20,6 +20,7 @@ program
   .description('Select a random author')
   .option('-s, --sex <string>', `Author's sex`)
   .option('-p, --priority <string>', `Author's priority`)
+  .option('-n, --namespace <string>', `History's namespace`)
   .action(randomCommand);
 
 export default program;
