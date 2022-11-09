@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 
-import { sex, priority } from '../../data/const';
+import { sex, priority, defaultNamespace } from '../../data/const';
 import { normalizeOptions, normalizeNamespace } from '../random';
 
 describe('Normalize options', () => {
@@ -57,10 +57,10 @@ describe('Normalize options', () => {
 });
 
 describe('Normalize namespace', () => {
-  it('Should return default if empty', () => {
+  it('Should return the default if empty', () => {
     const namespace = normalizeNamespace();
 
-    expect(namespace).toBe('default');
+    expect(namespace).toBe(defaultNamespace);
   });
 
   it('Should abbreviate', () => {

@@ -25,7 +25,7 @@ class History {
    * @returns {Object} - The history object with all namespaces
    */
   getHistory() {
-    const history = loadJSON(this.path, { default: [] });
+    const history = loadJSON(this.path, {});
 
     return history;
   }

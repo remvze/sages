@@ -2,7 +2,7 @@ import path from 'node:path';
 import chalk from 'chalk';
 import clipboard from 'clipboardy';
 
-import { sex, priority } from '../data/const.js';
+import { sex, priority, defaultNamespace } from '../data/const.js';
 import { historySize } from '../config/history.js';
 import authors from '../data/authors.js';
 import { selectRandomAuthor } from '../lib/author.js';
@@ -54,7 +54,7 @@ export const normalizeOptions = options => {
  * @returns {string} - Returns default if nothing is provided
  */
 export const normalizeNamespace = ns => {
-  if (!ns) return 'default';
+  if (!ns) return defaultNamespace;
 
   const namespace = ns.toLowerCase();
 
