@@ -435,6 +435,21 @@ const authors = [
     priority: priority.low,
     sex: sex.male,
   },
+  {
+    name: 'Rosa Luxemburg',
+    priority: priority.low,
+    sex: sex.female,
+  },
+  {
+    name: 'Rumi',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'J. D. Salinger',
+    priority: priority.low,
+    sex: sex.male,
+  },
 ];
 
 export default authors;
