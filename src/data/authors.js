@@ -450,6 +450,36 @@ const authors = [
     priority: priority.low,
     sex: sex.male,
   },
+  {
+    name: 'Robert Frost',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'Walt Whitman',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'T. S. Eliot',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'Henry Wadsworth Longfellow',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'Thomas Hardy',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'Rabindranath Tagore',
+    priority: priority.low,
+    sex: sex.male,
+  },
 ];
 
 export default authors;
