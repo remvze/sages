@@ -1,6 +1,6 @@
 {
   "name": "sages",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Random author selector for Philosophors.",
   "main": "index.js",
   "type": "module",

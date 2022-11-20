@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.11](https://github.com/remvze/authors/compare/v0.0.10...v0.0.11) (2022-11-20)
+
+
+### 🚚 Chores
+
+* add more authors ([8bd5f68](https://github.com/remvze/authors/commit/8bd5f68a39b4a19013d16c613035dc387de39dd8))
+* add more authors ([dfd173e](https://github.com/remvze/authors/commit/dfd173ea950133eecb498ba189e58ba51891af1b))
+* change package name ([2fdd13d](https://github.com/remvze/authors/commit/2fdd13da9673f837f8875b28370972d16791c709))
+
 ### [0.0.10](https://github.com/remvze/authors/compare/v0.0.9...v0.0.10) (2022-11-09)
 
 
