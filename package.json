@@ -1,11 +1,11 @@
 {
-  "name": "authors",
+  "name": "sages",
   "version": "0.0.10",
   "description": "Random author selector for Philosophors.",
   "main": "index.js",
   "type": "module",
   "bin": {
-    "authors": "bin/authors.js"
+    "sages": "bin/sages.js"
   },
   "scripts": {
     "test": "vitest run",

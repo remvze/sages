@@ -11,7 +11,7 @@ const { dirname } = getPath(import.meta.url);
 const pkg = loadJSON(path.resolve(dirname, '../package.json'));
 
 program
-  .name('authors')
+  .name('sages')
   .description('A CLI to randomly select an author')
   .version(pkg.version);
 
