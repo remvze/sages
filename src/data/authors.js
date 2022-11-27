@@ -480,6 +480,31 @@ const authors = [
     priority: priority.low,
     sex: sex.male,
   },
+  {
+    name: 'Louis Pasteur',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'Charles Darwin',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'Thales',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'Pythagoras',
+    priority: priority.low,
+    sex: sex.male,
+  },
+  {
+    name: 'Leonardo da Vinci',
+    priority: priority.low,
+    sex: sex.male,
+  },
 ];
 
 export default authors;
